@@ -65,7 +65,7 @@ table {
       border-right: none;
     }
   }
-} -->
+} 
 </style>
 </head>
 <center>
@@ -76,8 +76,8 @@ table {
 	<table border="1" align="center" width="75%">
 	<tr>
 		<th colspan="4"><h3><I><strong><b>IPL 2016 Teams</b></strong></I></h3></th>
-	</tr>
-	<tr>
+		</tr>
+	<tr>	
 		<td><h5 style="color:#900C3F;"><I><strong>DELHI DAREDEVILS</strong></I></h5></td>
 		<td>
 			<form action="ddteamview">

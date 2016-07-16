@@ -1,7 +1,7 @@
 [
 {
-  "Name": "paresh",
-  "PlayerList":[
+  "Name": "balram",
+  "DelhiPlayerList":[
   {
     "player_name": "Akhil Herwadkar",
     "player_img_url": "DelhiDareDevils/akhil_herwadkar.png",
@@ -243,7 +243,7 @@
    	 "player_batting_style": "left_handed",
    	 "player_bowling_style": "Off-spin and medium pace",
   	  "player_nationality": "Indian",
-  	  "player_dob": "31 October 1994",
+  	  "player_dob": "31 October 1994"
  	 }
 	]
 }

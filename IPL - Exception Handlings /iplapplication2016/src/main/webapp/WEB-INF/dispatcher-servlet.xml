@@ -46,5 +46,14 @@
 	<!-- Configure the multipart resolver -->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">      
     </bean>
-
+<bean id="connectionFactoryLocator" class="org.springframework.social.connect.support.ConnectionFactoryRegistry">
+    <property name="connectionFactories">
+        <list>
+            <bean class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
+                <constructor-arg value="${facebook.clientId}" />
+                <constructor-arg value="${facebook.clientSecret}" />				
+            </bean>
+        </list>
+    </property>
+</bean>
 </beans>
