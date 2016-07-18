@@ -52,14 +52,10 @@ public class IplHomeController
 		System.out.println(by);
 		System.out.println(query);
 		model.put("playerlist", ipldao.jsonsearch(by,query));
-		if(query.isEmpty()){
-		throw new SpringException("Please Provide the Field Name");
-		}
-		else{
+		
 			return new ModelAndView("playerlist",model);
 		    }
-		
-		}
+	
 	
 		// sorting
 		@RequestMapping(value="/sort", method = RequestMethod.GET)
