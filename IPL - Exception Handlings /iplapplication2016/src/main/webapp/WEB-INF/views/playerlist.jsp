@@ -4,6 +4,51 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+	  <script type="text/javascript">
+	  
+		(function($){
+		$.fn.tableSearch = function(options){
+		if(!$(this).is('table')){
+			return;
+		}
+		var tableObj = $(this),
+			searchText = (options.searchText)?options.searchText:' ',
+			searchPlaceHolder = (options.searchPlaceHolder)?options.searchPlaceHolder:'',
+			divObj = $('<div style="float:right;">'+searchText+'</div><br /><br />'),
+			inputObj = $('<input type="text" placeholder="'+searchPlaceHolder+'" />'),
+			caseSensitive = (options.caseSensitive===true)?true:false,
+			searchFieldVal = '',
+			pattern = '';
+		inputObj.off('keyup').on('keyup', function(){
+			searchFieldVal = $(this).val();
+			pattern = (caseSensitive)?RegExp(searchFieldVal):RegExp(searchFieldVal, 'i');
+			tableObj.find('tbody tr').hide().each(function(){
+				var currentRow = $(this);
+				currentRow.find('td').each(function(){
+					if(pattern.test($(this).html())){
+						currentRow.show();
+						return false;
+					}
+				});
+			});
+		});
+		tableObj.before(divObj.append(inputObj));
+		return tableObj;
+	}
+}(jQuery));
+</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('table.search-table').tableSearch({
+					searchText:'',
+					searchPlaceHolder:'Search Anything Here'
+				});
+			});
+		</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DD Player List</title>
 </head>
@@ -42,20 +87,23 @@ table {
       border-right: none;
     }
   }
-} -->
+} 
+
 </style>
 </head>
 <body>
 	<form action="playerlist" method="post">
-		<table border="1" cellpadding="2" width="70%">
+		<table border="1" cellpadding="2" width="70%" class="search-table">
+		<thead>
 			<tr>
-				<th><a href="search?by=name&q=">NAME</a></th>
-				<th><a href="search?by=role&q=">ROLE</a></th>
-				<th><a href="search?by=batting&q=">BATTING</a></th>
-				<th><a href="search?by=bowler&q=">BOWLING</a></th>
-				<th><a href="search?by=nation&q=">NATION</a></th>
-				<th><a href="search?by=dob&q=">DATE OF BIRTH</a></th>
+				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=name&q="> -->NAME</I></h4></th>
+				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=role&q="> -->ROLE</I></h4></th>
+				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=batting&q="> -->BATTING</I></h4></th>
+				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=bowler&q="> -->BOWLING</I></h4></th>
+				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=nation&q="> -->NATION</I></h4></th>
+				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=dob&q="> -->DATE OF BIRTH</I></h4></th>
 			</tr>
+			</thead>
 			<c:forEach var="playerlist" items="${playerlist}">
 
 				<tr>
@@ -66,8 +114,6 @@ table {
 					<td>${playerlist.nation}</td>
 					<td>${playerlist.dob}</td>
 
-					<%-- <td><a href="editemp/${playerlist.id}">Edit</a></td>
-<td><a href="deleteemp/${search?by=dob&q=}">Delete</a></td> --%>
 				</tr>
 
 			</c:forEach>

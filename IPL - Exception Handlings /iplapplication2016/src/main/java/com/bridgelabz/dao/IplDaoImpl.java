@@ -160,7 +160,7 @@ public class IplDaoImpl implements IplDao{
 			
 			public ArrayList<PlayerModel> GujratPlayerList(){
 				
-			return playergenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/GujratLionPlayer.json", "GujratPlayerList");
+			return playergenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLPlayer/GujratLionPlayer.json", "GujratPlayerList");
 			
 			}
 			
@@ -168,7 +168,7 @@ public class IplDaoImpl implements IplDao{
 		
 			public ArrayList<PlayerModel> DelhiPlayerList(){
 
-			return playergenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/DelhiPlayer.json", "DelhiPlayerList");
+			return playergenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLPlayer/DelhiPlayer.json", "DelhiPlayerList");
 	
 			}		
 			
@@ -176,7 +176,7 @@ public class IplDaoImpl implements IplDao{
 			
 			public ArrayList<PlayerModel> PunjabPlayerList(){
 
-			return playergenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/punjabPlayer.json", "PunjabPlayerList");
+			return playergenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLPlayer/punjabPlayer.json", "PunjabPlayerList");
 	
 			}
 			
@@ -184,7 +184,7 @@ public class IplDaoImpl implements IplDao{
 			
 			public ArrayList<PlayerModel> KolkataPlayer(){
 
-			return playergenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/KKRPlayer.json", "KKRPlayer");
+			return playergenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLPlayer/KKRPlayer.json", "KKRPlayer");
 	
 			}
 			
@@ -192,7 +192,7 @@ public class IplDaoImpl implements IplDao{
 			
 			public ArrayList<PlayerModel> MumbaiPlayerList(){
 
-			return playergenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/MumbaiPlayer.json", "MumbaiPlayerList");
+			return playergenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLPlayer/MumbaiPlayer.json", "MumbaiPlayerList");
 	
 			}
 	
@@ -200,7 +200,7 @@ public class IplDaoImpl implements IplDao{
 			
 			public ArrayList<PlayerModel> risingPunePlayerList(){
 
-			return playergenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/RisingPunePlayer.json", "PunePlayerList");
+			return playergenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLPlayer/RisingPunePlayer.json", "PunePlayerList");
 	
 			}	
 
@@ -223,7 +223,7 @@ public class IplDaoImpl implements IplDao{
 			
 			public ArrayList<PlayerModel> royalChallengesPlayerList(){
 
-			return playergenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/RoyalChallenges.json", "RoyalChallengePlayerList");
+			return playergenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLPlayer/RoyalChallenges.json", "RoyalChallengePlayerList");
 	
 			}				
 
@@ -231,7 +231,7 @@ public class IplDaoImpl implements IplDao{
 			
 			public ArrayList<PlayerModel> sunriseHydrabadPlayerList(){
 
-			return playergenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/SunriseHydrabad.json", "SunRiseHydrabadPlayerList");
+			return playergenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLPlayer/SunriseHydrabad.json", "SunRiseHydrabadPlayerList");
 	
 			}
 	
@@ -295,14 +295,14 @@ public class IplDaoImpl implements IplDao{
 /////////////////////  gujratTeam         //////////////
 	public ArrayList<TeamModel> gujratTeam() {
 		
-	return teamgenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/GujratTeam.json", "GujratPlayerList");
+	return teamgenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLTeam/GujratTeam.json", "GujratPlayerList");
 	
 	}
 	
 /////////////////////    punjabTeam    //////////////
 	public ArrayList<TeamModel> punjabTeam() {
 
-	return teamgenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/PunjabTeam.json", "PunjabPlayerList");
+	return teamgenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLTeam/PunjabTeam.json", "PunjabPlayerList");
 
 	}
 	
@@ -310,7 +310,7 @@ public class IplDaoImpl implements IplDao{
 	
 	public ArrayList<TeamModel> KolkataKnightRidersTeam() {
 
-	return teamgenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/KKRTeam.json", "KKRPlayerList");
+	return teamgenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLTeam/KKRTeam.json", "KKRPlayerList");
 
 	}	
 
@@ -318,14 +318,14 @@ public class IplDaoImpl implements IplDao{
 	
 		public ArrayList<TeamModel> mumbaiIndiansTeam() {
 
-		return teamgenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/MumbaiIndians.json", "MumbaiPlayerList");
+		return teamgenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLTeam/MumbaiIndians.json", "MumbaiPlayerList");
 
 		}	
 ///////////////////// risingPuneTeam //////////////
 		
 		public ArrayList<TeamModel> risingPuneTeam() {
 
-		return teamgenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/RisingPune.json", "PuneteamList");
+		return teamgenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLTeam/RisingPune.json", "PuneteamList");
 
 		}
 
@@ -333,7 +333,7 @@ public class IplDaoImpl implements IplDao{
 		
 		public ArrayList<TeamModel> royalChallengesTeam() {
 
-		return teamgenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/RoyalChallenges.json", "RoyalChallengeList");
+		return teamgenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLTeam/RoyalChallenges.json", "RoyalChallengeList");
 
 		}
 
@@ -341,14 +341,14 @@ public class IplDaoImpl implements IplDao{
 		
 		public ArrayList<TeamModel> sunriseHydrabadTeam() {
 
-		return teamgenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/SunriseHydrabad.json", "SunrisersHyderabadList");
+		return teamgenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLTeam/SunriseHydrabad.json", "SunrisersHyderabadList");
 
 		}
 ///////////////////// SunrisersHyderabad Team //////////////
 		
 		public ArrayList<TeamModel> DelhiDareDevils() {
 
-		return teamgenerate("/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLTeam/DelhiDareDevilsTeam.json", "DelhiDareDevilsTeamlist");
+		return teamgenerate("/home/balram/git/IPL/IPL - Exception Handlings /iplapplication2016/src/main/jsonfile/IPLTeam/DelhiDareDevilsTeam.json", "DelhiDareDevilsTeamlist");
 
 		}
 }

@@ -62,7 +62,7 @@ public class IplHomeController
 		}
 	
 		// sorting
-		@RequestMapping(value="/sort", method = RequestMethod.GET,produces = "application/json")
+		@RequestMapping(value="/sort", method = RequestMethod.GET)
 		public ModelAndView searchforanything(@RequestParam(value="sortby", required=true) String fieldName) 
 		{
 			Map<String, Object> model = new HashMap<String, Object>();
