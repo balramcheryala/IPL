@@ -28,7 +28,7 @@
 		
 		
 		<td>
-			<form action="DelhiDareDevils">
+			<form action="/IPL-2016-EXCEPTIONHANDLING/players/DelhiDareDevils">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -46,7 +46,7 @@
 			</form>
 		</td>
 		<td>
-			<form action="GujaratLions">
+			<form action="/IPL-2016-EXCEPTIONHANDLING/players/GujaratLions">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -63,7 +63,7 @@
 			</form>
 		</td>
 		<td>
-			<form action="KingsXIPunjab">
+			<form action="/IPL-2016-EXCEPTIONHANDLING/players/KingsXIPunjab">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -80,7 +80,7 @@
 			</form>
 		</td>
 		<td>
-			<form action="KolkataKnightRiders">
+			<form action="/IPL-2016-EXCEPTIONHANDLING/players/KolkataKnightRiders">
 				<button type="submit" class="View Player Info">Player Inforamtion</button>
 			</form>
 		</td>
@@ -97,7 +97,7 @@
 			</form>
 		</td>
 		<td>
-			<form action="MumbaiIndians">
+			<form action="/IPL-2016-EXCEPTIONHANDLING/players/MumbaiIndians">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -114,7 +114,7 @@
 			</form>
 		</td>
 		<td>
-			<form action="RisingPuneSupergiants">
+			<form action="/IPL-2016-EXCEPTIONHANDLING/players/RisingPuneSupergiants">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -130,7 +130,7 @@
 			</form>
 		</td>
 		<td>
-			<form action="rcbplayerview">
+			<form action="/IPL-2016-EXCEPTIONHANDLING/players/rcbplayerview">
 				<button type="submit" class="View Player Info">Player Inforamtion</button>
 			</form>
 		</td>
@@ -147,7 +147,7 @@
 			</form>
 		</td>
 		<td>
-			<form action="SunRiseHydrabad">
+			<form action="/IPL-2016-EXCEPTIONHANDLING/players/SunRiseHydrabad">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>

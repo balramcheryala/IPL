@@ -100,7 +100,7 @@ public class IplDaoImpl implements IplDao{
 			  
 		  	}
 
-		 //////////////////calling Method 
+		 //////////////////PlayerModel/////////////
 					
 			@SuppressWarnings("unchecked")
 			public ArrayList<PlayerModel> iplplayergenerate(String ipl) {
@@ -217,7 +217,7 @@ public class IplDaoImpl implements IplDao{
 			}
 
 	
-/////////////////////////////TeamModel  Method ///////////////////////////////////////
+/////////////////////////////TeamModel///////////////////////////////////////
 			
 			@SuppressWarnings("unchecked")
 			public ArrayList<TeamModel> iplteamgenerate(String iplteam) {

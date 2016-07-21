@@ -5,17 +5,21 @@ import java.util.Map;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.social.ResourceNotFoundException;
 import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
 import org.springframework.social.oauth2.OAuth2Operations;
 import org.springframework.social.oauth2.OAuth2Parameters;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
@@ -51,9 +55,20 @@ public class IplHomeController {
 			{
 			return new ModelAndView ("iplhome");
 			}
+			
+			
+			
+	// Error Handling
+			@ExceptionHandler(ResourceNotFoundException.class)
+			@ResponseStatus(HttpStatus.NOT_FOUND)
+			public ModelAndView PageNotFound(Model m)
+			{
+			return new ModelAndView ("404error");
+			}
 
-	
-		// Searching 
+		
+			
+	// Searching 
 		@RequestMapping(value="/search", method = RequestMethod.GET)
 		@ResponseBody
 			public ModelAndView searchbyname(@RequestParam(value="by", required=true) String by,@RequestParam(value="q", required=true) String query) 
@@ -81,7 +96,7 @@ public class IplHomeController {
 		
 		
 		// Request Mapping For Player
-			@RequestMapping(value="/{request}",method= RequestMethod.GET)
+			@RequestMapping(value="/players/{request}",method= RequestMethod.GET)
 			public ModelAndView playersList(@PathVariable("request") String ipl) {
 			System.out.println(ipl);
 			Map<String, Object> model = new HashMap<String, Object>();
