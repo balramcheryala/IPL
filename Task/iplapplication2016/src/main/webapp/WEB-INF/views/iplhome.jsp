@@ -81,7 +81,7 @@
 		</td>
 		<td>
 			<form action="/IPL-2016-EXCEPTIONHANDLING/players/KolkataKnightRiders">
-				<button type="submit" class="View Player Info">Player Inforamtion</button>
+				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
 <td>
@@ -130,8 +130,8 @@
 			</form>
 		</td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/players/rcbplayerview">
-				<button type="submit" class="View Player Info">Player Inforamtion</button>
+			<form action="/IPL-2016-EXCEPTIONHANDLING/players/RoyalChallenge">
+				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
 			<td>

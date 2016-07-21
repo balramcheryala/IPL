@@ -63,6 +63,7 @@ public class IplHomeController {
 			@ResponseStatus(HttpStatus.NOT_FOUND)
 			public ModelAndView PageNotFound(Model m)
 			{
+				m.addAttribute(HttpStatus.NOT_FOUND);
 			return new ModelAndView ("404error");
 			}
 

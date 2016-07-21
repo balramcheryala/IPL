@@ -135,7 +135,7 @@ public class IplDaoImpl implements IplDao{
 			JSONParser parser= new JSONParser();
 				        
 			try {
-				 String filepath = "/home/bridgelabz/Pictures/iplapplication2016/src/main/jsonfile/IPLPlayer/"+ipl+".json";
+				 String filepath = "/home/bridgelabz/Documents/iplapplication2016/src/main/jsonfile/IPLPlayer/"+ipl+".json";
 				 FileReader fileread=new FileReader(filepath);
 				        	
 				 Object obj=parser.parse(fileread);
@@ -246,9 +246,9 @@ public class IplDaoImpl implements IplDao{
 						}
 						
 						
-						else{
-						ArrayList<TeamModel> arraylist = new ArrayList<TeamModel>();
-						JSONParser parser = new JSONParser();
+			else{
+				ArrayList<TeamModel> arraylist = new ArrayList<TeamModel>();
+				JSONParser parser = new JSONParser();
 
 			try {
 				String file = "/home/bridgelabz/Pictures/iplapplication2016/src/main/jsonfile/IPLTeam/"+iplteam+".json";

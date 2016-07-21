@@ -6,23 +6,16 @@
 <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/bootstrap-filterable.css" />" />
     <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/bootstrap-editable.css" />" />
-    <link href="http://lightswitch05.github.io/filterable/stylesheets/main.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script> 
 	<script type="text/javascript" src="<c:url value="/resources/css/searchbar.css" />"></script>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-
-	<title>Player List</title>
 	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/playerlist.css" />" />
+	<title>Player List</title>
 	</head>
 	<body>
 		<div class="container">
@@ -31,16 +24,16 @@
 		<table border="1" cellpadding="2" width="70%" class="table table-striped table-hover table-condensed">
  		<thead>
 			<tr>
-				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=name&q="> -->NAME</I></h4></th>
-				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=role&q="> -->ROLE</I></h4></th>
-				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=batting&q="> -->BATTING</I></h4></th>
-				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=bowler&q="> -->BOWLING</I></h4></th>
-				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=nation&q="> -->NATION</I></h4></th>
-				<th><h4 style="color:#00cccc;"><I><!-- <a href="search?by=dob&q="> -->DATE OF BIRTH</I></h4></th>
-			</tr>
-			</thead>
+				<th><h4 style="color:#00cccc;"><!-- <a href="search?by=name&q="> -->NAME</h4></th>
+				<th><h4 style="color:#00cccc;"><!-- <a href="search?by=role&q="> -->ROLE</h4></th>
+				<th><h4 style="color:#00cccc;"><!-- <a href="search?by=batting&q="> -->BATTING</h4></th>
+				<th><h4 style="color:#00cccc;"><!-- <a href="search?by=bowler&q="> -->BOWLING</h4></th>
+				<th><h4 style="color:#00cccc;"><!-- <a href="search?by=nation&q="> -->NATION</h4></th>
+				<th><h4 style="color:#00cccc;"><!-- <a href="search?by=dob&q="> -->DATE OF BIRTH</h4></th>
+				</tr>
+				</thead>
  
- <c:forEach var="playerslist" items="${playerslist}">
+				 <c:forEach var="playerslist" items="${playerslist}">
 
 					<tr>
 					<td>${playerslist.name}</td>
