@@ -6,30 +6,24 @@
 <head>
 <style>
 .button {
-	background-color: #4CAF50;
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-	cursor: pointer;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 </style>
 </head>
-<h3>
-	<b>Your Registration Successfully Done.</b>
-</h3>
-<h3>
-	<b>Your UserName Is ${registration.userName}</b>
-</h3>
-<h3>
-	<b>Your Password Is ${registration.password}</b>
-</h3>
+<h3><b>Your Registration Successfully Done.</b></h3>
+<h3><b>Your UserName Is ${registration.userName}</b></h3>
+<h3><b>Your Password Is ${registration.password}</b></h3>
 <form action="loginform.html">
-	<button type="submit" class="button">For Login</button>
+<button type="submit"  class="button">For Login</button>
 </form>
 </body>
 </html>

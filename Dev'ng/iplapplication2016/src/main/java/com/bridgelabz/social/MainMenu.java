@@ -12,12 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 public class MainMenu extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	private String code = "";
+	private String code="";
 
-	public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	public void service(HttpServletRequest req, HttpServletResponse res)
+			throws ServletException, IOException {		
 		code = req.getParameter("code");
 		if (code == null || code.equals("")) {
-			throw new RuntimeException("ERROR: Didn't get code parameter in callback.");
+			throw new RuntimeException(
+					"ERROR: Didn't get code parameter in callback.");
 		}
 		FBConnection fbConnection = new FBConnection();
 		String accessToken = fbConnection.getAccessToken(code);
@@ -28,9 +30,9 @@ public class MainMenu extends HttpServlet {
 		ServletOutputStream out = res.getOutputStream();
 		out.println("<h1>Facebook Login using Java</h1>");
 		out.println("<h2>Application Main Menu</h2>");
-		out.println("<div>Welcome " + fbProfileData.get("first_name"));
-		out.println("<div>Your Email: " + fbProfileData.get("email"));
-		out.println("<div>You are " + fbProfileData.get("gender"));
+		out.println("<div>Welcome "+fbProfileData.get("first_name"));
+		out.println("<div>Your Email: "+fbProfileData.get("email"));
+		out.println("<div>You are "+fbProfileData.get("gender"));		
 	}
 
 }

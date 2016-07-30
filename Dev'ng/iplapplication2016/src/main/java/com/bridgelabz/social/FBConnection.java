@@ -10,8 +10,8 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 
 public class FBConnection {
-	public static final String FB_APP_ID = "872311806235774";
-	public static final String FB_APP_SECRET = "f9b7d6e1e4d13b4cc2fcee4ea342fabf";
+	public static final String FB_APP_ID = "248167875567179";
+	public static final String FB_APP_SECRET = "a1699096f76c23caabf7b84d1bdb6596";
 	public static final String REDIRECT_URI = "http://localhost:8081/IPL-2016-EXCEPTIONHANDLING/ipl.html";
 
 	static String accessToken = "";
@@ -19,46 +19,52 @@ public class FBConnection {
 	public String getFBAuthUrl() {
 		String fbLoginUrl = "";
 		try {
-			fbLoginUrl = "http://www.facebook.com/dialog/oauth?" + "client_id=" + FBConnection.FB_APP_ID
-					+ "&redirect_uri=" + URLEncoder.encode(FBConnection.REDIRECT_URI, "UTF-8") + "&scope=email";
+			fbLoginUrl = "http://www.facebook.com/dialog/oauth?" + "client_id="
+					+ FBConnection.FB_APP_ID + "&redirect_uri="
+					+ URLEncoder.encode(FBConnection.REDIRECT_URI, "UTF-8")
+					+ "&scope=email";
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
 		return fbLoginUrl;
 	}
-
-	// twitter
-
+	
+	//twitter
+	
 	public String getTWAuthUrl() {
-		String fbLoginUrl = "";
-		try {
-			fbLoginUrl = "http://www.facebook.com/dialog/oauth?" + "client_id=" + FBConnection.FB_APP_ID
-					+ "&redirect_uri=" + URLEncoder.encode(FBConnection.REDIRECT_URI, "UTF-8") + "&scope=email";
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
-		return fbLoginUrl;
+	String fbLoginUrl = "";
+	try {
+		fbLoginUrl = "http://www.facebook.com/dialog/oauth?" + "client_id="
+				+ FBConnection.FB_APP_ID + "&redirect_uri="
+				+ URLEncoder.encode(FBConnection.REDIRECT_URI, "UTF-8")
+				+ "&scope=email";
+	} catch (UnsupportedEncodingException e) {
+		e.printStackTrace();
 	}
+	return fbLoginUrl;
+}
 
-	// Linked in
-
+	//Linked in
+	
 	public String getLkAuthUrl() {
 		String fbLoginUrl = "";
 		try {
-			fbLoginUrl = "http://www.facebook.com/dialog/oauth?" + "client_id=" + FBConnection.FB_APP_ID
-					+ "&redirect_uri=" + URLEncoder.encode(FBConnection.REDIRECT_URI, "UTF-8") + "&scope=email";
+			fbLoginUrl = "http://www.facebook.com/dialog/oauth?" + "client_id="
+					+ FBConnection.FB_APP_ID + "&redirect_uri="
+					+ URLEncoder.encode(FBConnection.REDIRECT_URI, "UTF-8")
+					+ "&scope=email";
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
 		return fbLoginUrl;
 	}
-
 	public String getFBGraphUrl(String code) {
 		String fbGraphUrl = "";
 		try {
-			fbGraphUrl = "https://graph.facebook.com/oauth/access_token?" + "client_id=" + FBConnection.FB_APP_ID
-					+ "&redirect_uri=" + URLEncoder.encode(FBConnection.REDIRECT_URI, "UTF-8") + "&client_secret="
-					+ FB_APP_SECRET + "&code=" + code;
+			fbGraphUrl = "https://graph.facebook.com/oauth/access_token?"
+					+ "client_id=" + FBConnection.FB_APP_ID + "&redirect_uri="
+					+ URLEncoder.encode(FBConnection.REDIRECT_URI, "UTF-8")
+					+ "&client_secret=" + FB_APP_SECRET + "&code=" + code;
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
@@ -79,7 +85,8 @@ public class FBConnection {
 			try {
 				fbConnection = fbGraphURL.openConnection();
 				BufferedReader in;
-				in = new BufferedReader(new InputStreamReader(fbConnection.getInputStream()));
+				in = new BufferedReader(new InputStreamReader(
+						fbConnection.getInputStream()));
 				String inputLine;
 				b = new StringBuffer();
 				while ((inputLine = in.readLine()) != null)
@@ -87,12 +94,14 @@ public class FBConnection {
 				in.close();
 			} catch (IOException e) {
 				e.printStackTrace();
-				throw new RuntimeException("Unable to connect with Facebook " + e);
+				throw new RuntimeException("Unable to connect with Facebook "
+						+ e);
 			}
 
 			accessToken = b.toString();
 			if (accessToken.startsWith("{")) {
-				throw new RuntimeException("ERROR: Access Token Invalid: " + accessToken);
+				throw new RuntimeException("ERROR: Access Token Invalid: "
+						+ accessToken);
 			}
 		}
 		return accessToken;

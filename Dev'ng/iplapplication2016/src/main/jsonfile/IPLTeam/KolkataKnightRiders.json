@@ -1,15 +1,16 @@
 [
+{
+	"Name":"KKR",
+	"KolkataKnightRiders":[
 	{
-		"Name": "KKR",
-		"KolkataKnightRiders": [
-			{
-				"team_name": "KolkataKnightRiders",
-				"team_img_url": "team_logo/KKR.jpg",
-				"team_coach": "Jacques Kallis",
-				"team_captain": "Gautam Gambhir",
-				"team_home_venue": "Eden Gardens",
-				"team_owner": "Knight Riders Sports Private Ltd"
-			}
-		]
-	}
+    "team_name": "KolkataKnightRiders",
+    "team_img_url": "team_logo/KKR.jpg",
+    "team_coach": "Jacques Kallis",
+    "team_captain": "Gautam Gambhir",
+    "team_home_venue": "Eden Gardens",
+    "team_owner": "Knight Riders Sports Private Ltd"
+    
+  }
+	]
+}
 ]

@@ -23,15 +23,17 @@ import com.bridgelabz.model.TeamModel;
 public class IplDaoImpl implements IplDao {
 
 	@Autowired
+	
+	//creation of Session instances
 	SessionFactory sessionFactory;
-
-	private static final String TEAM_URL = "/home/bridgelabz/Pictures/iplapplication2016/src/main/jsonfile/IPLTeam/";
-	private static final String PLAYER_URL = "/home/bridgelabz/Pictures/iplapplication2016/src/main/jsonfile/IPLPlayer/";
-
+	
+	//Session Importing
 	public Session session;
 
-	// Searching Technique
+	private static final String PLAYER_URL = "/home/bridgelabz/Music/iplapplication/src/main/jsonfile/IPLPlayer";
+	private static final String TEAM_URL = "/home/bridgelabz/Music/iplapplication/src/main/jsonfile/IPLTeam/";
 
+	// Searching Technique
 	public ArrayList<?> jsonsearch(String fieldname, String text) {
 		new PlayerModel();
 		Session session = sessionFactory.openSession();
@@ -40,7 +42,6 @@ public class IplDaoImpl implements IplDao {
 		String SQL_QUERY = " from PlayerModel as o where o." + fieldname + " LIKE " + "'%" + text + "%'";
 		query = session.createQuery(SQL_QUERY);
 		List<?> list = query.list();
-		System.out.println("list is :" + list);
 		if ((list != null) && (list.size() > 0)) {
 			listFound = true;
 			System.out.println(listFound);
@@ -59,7 +60,6 @@ public class IplDaoImpl implements IplDao {
 		Query query = session.createQuery(SQL_QUERY);
 		System.out.println("Query executing :" + query);
 		List<?> list = query.list();
-		System.out.println("list is :" + list);
 		if ((list != null) && (list.size() > 0)) {
 			///
 		}
@@ -115,21 +115,21 @@ public class IplDaoImpl implements IplDao {
 			List list1 = query.list();
 			System.out.println(list1);
 			if ((list1 != null) && (list1.size() > 0)) {
-				System.out.println("List Not Null and Size Greater Than Zero");
+				System.out.println("Database Contain Player Details");
 				return (ArrayList<PlayerModel>) list1;
 
 			}
 		} else
 
 		{
-
+			System.out.println("Database Does not Contain Player Details");
 			ArrayList<PlayerModel> arraylist = new ArrayList<PlayerModel>();
 			JSONParser parser = new JSONParser();
 
 			try {
 				String filepath = PLAYER_URL + ipl + ".json";
 				FileReader fileread = new FileReader(filepath);
-
+				System.out.println("Reading Json File ");
 				Object obj = parser.parse(fileread);
 				JSONArray array = (JSONArray) obj;
 
@@ -153,12 +153,10 @@ public class IplDaoImpl implements IplDao {
 
 							////////// save with transaction in the
 							////////// database////////////
-
-							System.out.println("save Block");
 							Session session = sessionFactory.openSession();
 							Transaction tx1 = session.beginTransaction();
 							session.save(player);
-							System.out.println("Saved data");
+							System.out.println("Player Details Saved Successfully in Database ");
 							tx1.commit();
 						} catch (Exception e) {
 							e.printStackTrace();
