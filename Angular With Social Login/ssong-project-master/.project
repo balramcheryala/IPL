@@ -38,5 +38,9 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
+<<<<<<< HEAD
+=======
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
+>>>>>>> d5ce4bb3702a222d1df4c9cab90460298837861b
 	</natures>
 </projectDescription>
