@@ -40,7 +40,7 @@
 
     <bean id="jacksonObjectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
 
-    <!-- data source, sessionfactory, hiberate template & transaction manager -->
+    <!-- data source, sessionfactory, hibernate template & transaction manager -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${database.driver}"></property>
         <property name="url" value="${database.url}"></property>

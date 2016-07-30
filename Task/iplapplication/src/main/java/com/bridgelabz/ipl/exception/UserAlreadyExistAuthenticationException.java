@@ -11,6 +11,7 @@ public class UserAlreadyExistAuthenticationException extends AuthenticationExcep
 
 	public UserAlreadyExistAuthenticationException(final String msg) {
         super(msg);
+        System.out.println("IPL Exception User Alredy Exsist result:"+msg);
     }
 
 }

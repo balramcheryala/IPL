@@ -24,10 +24,12 @@ public class IplDaoImpl implements IplDao {
 
 	@Autowired
 	SessionFactory sessionFactory;
-	private static final String TEAM_URL = "/home/bridgelabz/Pictures/iplapplication/src/main/jsonfile/IPLTeam/";
-	private static final String PLAYER_URL = "/home/bridgelabz/Pictures/iplapplication/src/main/jsonfile/IPLPlayer";
 
+	// Session Importing
 	public Session session;
+
+	private static final String PLAYER_URL = "/home/bridgelabz/Desktop/iplapplication/src/main/jsonfile/IPLPlayer/";
+	private static final String TEAM_URL = "/home/bridgelabz/Desktop/iplapplication/src/main/jsonfile/IPLTeam/";
 
 	// Searching Technique
 
@@ -190,7 +192,8 @@ public class IplDaoImpl implements IplDao {
 
 	}
 
-	///////////////////////////////// String to Date////////////////////////////////////
+	///////////////////////////////// String to
+	///////////////////////////////// Date////////////////////////////////////
 
 	public Date stringToDate(String str) {
 		DateFormat f = new SimpleDateFormat("dd MMMM yyyy");

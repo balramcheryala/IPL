@@ -34,8 +34,6 @@ public class IplHomeController {
 		@Autowired
 		public SessionFactory sessionfactory;
 	
-		private Facebook facebook;
-	
 		// FacebookPage
 			@RequestMapping(value="/facebook",method=RequestMethod.GET)
 			public String helloFacebook(Model model) {
@@ -44,7 +42,7 @@ public class IplHomeController {
 			OAuth2Parameters params = new OAuth2Parameters();
 			params.setRedirectUri("iplhome");
 			params.setScope("email");
-			String authorizeUrl = oauthOperations.buildAuthorizeUrl(params);
+			oauthOperations.buildAuthorizeUrl(params);
 			return "iplhome";
 			}
 	

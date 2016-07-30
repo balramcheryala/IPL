@@ -13,13 +13,6 @@
     <artifactId>spring-core</artifactId>
     <version>4.1.6.RELEASE</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.scribe/scribe -->
-<dependency>
-    <groupId>org.scribe</groupId>
-    <artifactId>scribe</artifactId>
-    <version>1.0.6</version>
-</dependency>
-
 <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 <dependency>
     <groupId>com.fasterxml.jackson.core</groupId>

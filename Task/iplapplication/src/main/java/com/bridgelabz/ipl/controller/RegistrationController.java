@@ -30,9 +30,9 @@ public class RegistrationController {
         return model;
     }
 
-    @RequestMapping(value = {"/user/register"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/user/register"}, method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
     public @ResponseBody ModelAndView registerUser(@RequestBody UserRegistrationForm registrationForm) throws UserAlreadyExistAuthenticationException {
-
+    	System.out.println("User registration ");
         if (registrationForm.getUserId() == null) {
             registrationForm.setUserId(registrationForm.getUserId());
         }
@@ -42,7 +42,7 @@ public class RegistrationController {
         SecurityUtil.authenticateUser(localUser);
 
         ModelAndView model = new ModelAndView();
-        model.addObject("title", "Hello Welcome to IPL ");
+        model.addObject("title", "User");
         model.addObject("user", localUser.getUsername());
         model.setViewName("user");
         return model;

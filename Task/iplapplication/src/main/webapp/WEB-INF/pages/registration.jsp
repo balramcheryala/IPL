@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>${title}</title>
-   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
 <h2>${title}</h2>
@@ -43,13 +43,13 @@
        <tr>
             <th>
                 <input type="hidden" id="socialProvider" name="socialProvider" value="NONE" />
-                <input type="submit" id="doRegister" onclick="post()">
+                <button type="button" id="doRegister" onclick="proceed()">Submit</button>
             </th>
        </tr>
        </table>
        </div>
 	<script>
-        post(){
+        proceed(){
             var person = {
                         userId: $("##registrationForm-userId").val(),
                         email:$("##registrationForm-email").val(),
@@ -63,7 +63,7 @@
 
             $.ajax({
               type: "post",
-              url: '/services/user/register',
+              url: '/user/register',
               data: person,
               dataType: 'json',
               contentType: "application/json; charset=utf-8",

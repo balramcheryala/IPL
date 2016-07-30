@@ -9,11 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.bridgelabz.ipl.database.model.User;
 
-
-/**
- * @author <a href="mailto:psunil1278@gmail.com">Sunil Kumar</a>
- * @since 26/12/15
- */
 @Service
 public class UserDAO implements GenericDao<User,String> {
 
@@ -57,6 +52,7 @@ public class UserDAO implements GenericDao<User,String> {
 
     @Override
     public void flush() {
+    	System.out.println("Write changes to the database");
         template.flush();
     }
 

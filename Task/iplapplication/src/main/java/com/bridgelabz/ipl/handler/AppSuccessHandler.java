@@ -14,68 +14,76 @@ import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.RedirectStrategy;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 
-
+//Redirect to different pages after Login with Spring Security
 public class AppSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
 
-    private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+	// Encapsulates the redirection logic for all classes in the framework which
+	// perform redirects.
+	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
-    @Override
-    protected void handle(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
-            throws IOException {
-        String targetUrl = determineTargetUrl(authentication);
+	@Override
+	protected void handle(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
+			throws IOException {
+		String targetUrl = determineTargetUrl(authentication);
 
-        if (response.isCommitted()) {
-            System.out.println("Can't redirect");
-            return;
-        }
+		if (response.isCommitted()) {
+			System.out.println("Can't redirect");
+			return;
+		}
 
-        redirectStrategy.sendRedirect(request, response, targetUrl);
-    }
+		redirectStrategy.sendRedirect(request, response, targetUrl);
+	}
 
-    /*
-     * This method extracts the roles of currently logged-in user and returns
-     * appropriate URL according to his/her role.
-     */
-    protected String determineTargetUrl(Authentication authentication) {
-        String url = "";
+	/*
+	 * This method extracts the roles of currently logged-in user and returns
+	 * appropriate URL according to his/her role.
+	 */
+	protected String determineTargetUrl(Authentication authentication) {
+		String url = "";
 
-        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+		Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
 
-        List<String> roles = new ArrayList<String>();
+		List<String> roles = new ArrayList<String>();
 
-        for (GrantedAuthority a : authorities) {
-            roles.add(a.getAuthority());
-        }
+		for (GrantedAuthority a : authorities) {
+			roles.add(a.getAuthority());
+		}
 
-        if (isAdmin(roles) || isUser(roles)) {
-            url = "/services/userpage";
-        } else {
-            url = "/services/accessDenied";
-        }
+		if (isAdmin(roles) || isUser(roles)) {
 
-        return url;
-    }
+			url = "/services/userpage";
+			System.out.println("Step 10 :Role USer/Admin App Success Handler services User Page redirecting");
+		} else {
 
-    private boolean isUser(List<String> roles) {
-        if (roles.contains("ROLE_USER")) {
-            return true;
-        }
-        return false;
-    }
+			url = "/services/accessDenied";
+			System.out.println("Step 11 :Role USer/Admin App Suuess Handler services accessDenied redirecting");
+		}
 
-    private boolean isAdmin(List<String> roles) {
-        if (roles.contains("ROLE_ADMIN")) {
-            return true;
-        }
-        return false;
-    }
+		return url;
+	}
 
-    public void setRedirectStrategy(RedirectStrategy redirectStrategy) {
-        this.redirectStrategy = redirectStrategy;
-    }
+	private boolean isUser(List<String> roles) {
+		if (roles.contains("ROLE_USER")) {
+			System.out.println("Step 7  : ROlE = user");
+			return true;
+		}
+		return false;
+	}
 
-    protected RedirectStrategy getRedirectStrategy() {
-        return redirectStrategy;
-    }
+	private boolean isAdmin(List<String> roles) {
+		if (roles.contains("ROLE_ADMIN")) {
+			System.out.println("Is admin : role Admin");
+			return true;
+		}
+		return false;
+	}
+
+	public void setRedirectStrategy(RedirectStrategy redirectStrategy) {
+		this.redirectStrategy = redirectStrategy;
+	}
+
+	protected RedirectStrategy getRedirectStrategy() {
+		return redirectStrategy;
+	}
 
 }

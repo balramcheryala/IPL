@@ -8,18 +8,20 @@
 
     <import resource="spring-persistent-servlet.xml"/>
 
-    <!--  authentication manager and its provider( social provider deals with social login & local user provider deals with form login ) -->
+    <!--  step 2
+    authentication manager and its provider( social provider deals with social login & local user provider deals with form login ) -->
     <security:authentication-manager alias="authenticationManager">
         <security:authentication-provider ref="socialAuthenticationProvider"/>
         <security:authentication-provider user-service-ref="localUserDetailService"/>
     </security:authentication-manager>
-
+	<!-- socialAuthenticationProvider -->
     <bean id="socialAuthenticationProvider" class="org.springframework.social.security.SocialAuthenticationProvider">
         <constructor-arg ref="inMemoryUsersConnectionRepository"/>
         <constructor-arg ref="socialUserDetailService"/>
     </bean>
 
-    <!-- form login beans -->
+    <!--Step 1
+     form login beans -->
     <bean id="appAuthenticationEntryPoint"
           class="com.bridgelabz.ipl.entrypoint.AppAuthenticationEntryPoint">
         <constructor-arg name="loginFormUrl" value="/services/login"/>
@@ -82,14 +84,15 @@
     </bean>
 
 
-    <!-- inmemory connection repository which holds connection repository per local user -->
+    <!-- in memory connection repository which holds connection repository per local user -->
     <bean id="inMemoryUsersConnectionRepository"
           class="org.springframework.social.connect.mem.InMemoryUsersConnectionRepository">
         <constructor-arg name="connectionFactoryLocator" ref="appSocialAuthenticationServiceRegistry"/>
         <property name="connectionSignUp" ref="connectionSignUp"/>
     </bean>
 
-    <!-- service registry will holds connection factory of each social provider -->
+    <!-- Step 3
+    service registry will holds connection factory of each social provider -->
     <bean id="appSocialAuthenticationServiceRegistry"
           class="com.bridgelabz.ipl.registry.AppSocialAuthenticationServiceRegistry">
         <constructor-arg>

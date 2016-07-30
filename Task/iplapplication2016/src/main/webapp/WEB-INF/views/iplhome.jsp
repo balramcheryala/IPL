@@ -21,14 +21,14 @@
 	<tr>	
 		<td><h5 style="color:#900C3F;"><I><strong>DELHI DAREDEVILS</strong></I></h5></td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/teams/DelhiDareDevils">
+			<form action="/iplapplication2016/teams/DelhiDareDevils">
 				<button type="submit" class="View  Team Info">Team Information</button>
 			</form>
 		</td>
 		
 		
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/players/DelhiDareDevils">
+			<form action="/iplapplication2016/players/DelhiDareDevils">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -41,12 +41,12 @@
 	<tr>
 		<td><h5><I><strong>GUJARATH LIONS</strong></I></h5></td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/teams/GujaratLions">
+			<form action="/iplapplication2016/teams/GujaratLions">
 				<button type="submit" class="View  Team Info">Team Information</button>
 			</form>
 		</td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/players/GujaratLions">
+			<form action="/iplapplication2016/players/GujaratLions">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -58,12 +58,12 @@
 	<tr>
 <td><h5 style="color:#900C3F;"><I><strong>KING XI PANJAB</strong></I></h5></td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/teams/KingsXIPunjab">
+			<form action="/iplapplication2016/teams/KingsXIPunjab">
 				<button type="submit" class="View  Team Info">Team Information</button>
 			</form>
 		</td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/players/KingsXIPunjab">
+			<form action="/iplapplication2016/players/KingsXIPunjab">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -75,12 +75,12 @@
 	<tr>
 		<td><h5><I><strong>KOLKATA KNIGHT RIDERS</strong></I></h5></td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/teams/KolkataKnightRiders">
+			<form action="/iplapplication2016/teams/KolkataKnightRiders">
 				<button type="submit" class="View  Team Info">Team Information</button>
 			</form>
 		</td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/players/KolkataKnightRiders">
+			<form action="/iplapplication2016/players/KolkataKnightRiders">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -92,12 +92,12 @@
 	<tr>
 <td><h5 style="color:#900C3F;"><I><strong>MUMBAI INDIANS</strong></I></h5></td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/teams/MumbaiIndians">
+			<form action="/iplapplication2016/teams/MumbaiIndians">
 				<button type="submit" class="View  Team Info">Team Information</button>
 			</form>
 		</td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/players/MumbaiIndians">
+			<form action="/iplapplication2016/players/MumbaiIndians">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -109,12 +109,12 @@
 	<tr>
 		<td><h5><I><strong>RISING PUNE SUPER GIANTS</strong></I></h5></td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/teams/RisingPuneSupergiants">
+			<form action="/iplapplication2016/teams/RisingPuneSupergiants">
 				<button type="submit" class="View  Team Info">Team Information</button>
 			</form>
 		</td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/players/RisingPuneSupergiants">
+			<form action="/iplapplication2016/players/RisingPuneSupergiants">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -125,12 +125,12 @@
 	<tr>
 <td><h5 style="color:#900C3F;"><I><strong>ROYAL CHALANGERS BANGLORE </strong></I></h5></td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/teams/RoyalChallenge">
+			<form action="/iplapplication2016/teams/RoyalChallenge">
 				<button type="submit" class="View  Team Info">Team Information</button>
 			</form>
 		</td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/players/RoyalChallenge">
+			<form action="/iplapplication2016/players/RoyalChallenge">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
@@ -142,12 +142,12 @@
 	<tr>
 		<td><h5><I><strong>SUNRISERS HYDERABAD </strong></I></h5></td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/teams/SunRiseHydrabad">
+			<form action="/iplapplication2016/teams/SunRiseHydrabad">
 				<button type="submit" class="View  Team Info">Team Information</button>
 			</form>
 		</td>
 		<td>
-			<form action="/IPL-2016-EXCEPTIONHANDLING/players/SunRiseHydrabad">
+			<form action="/iplapplication2016/players/SunRiseHydrabad">
 				<button type="submit" class="View Player Info">Player Information</button>
 			</form>
 		</td>
