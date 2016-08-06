@@ -60,7 +60,7 @@
 						role="button" aria-haspopup="true" aria-expanded="false">
 
 							<div class="img"
-								style="background-image: url('http://tinyurl.com/j5duvyg')">
+								style="background-image: url('http://tinyurl.com/h9uonzq')">
 							</div> <span class="name">${user}</span>
 
 					</a>
@@ -104,7 +104,7 @@
 					</a>
 						<ul>
 							<li class="active"><a href="userpage"> Users </a></li>
-							<li><a href="item-editor.html"> Sign-in Method </a></li>
+							<li><a href="signinby"> Sign-in Method </a></li>
 						</ul></li>
 			</aside>
 			<div class="sidebar-overlay" id="sidebar-overlay"></div>
@@ -115,7 +115,7 @@
 						<div class="col-md-6">
 							<h3 class="title">
 
-								<a href="newuser.html" class="btn btn-primary btn-sm rounded-s">
+								<a href="newuser" class="btn btn-primary btn-sm rounded-s">
 									Add New </a>
 								<div class="action dropdown">
 									<button

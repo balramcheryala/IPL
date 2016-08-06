@@ -14,6 +14,8 @@
         <security:authentication-provider ref="socialAuthenticationProvider"/>
         <security:authentication-provider user-service-ref="localUserDetailService"/>
     </security:authentication-manager>
+    
+    
 	<!-- socialAuthenticationProvider -->
     <bean id="socialAuthenticationProvider" class="org.springframework.social.security.SocialAuthenticationProvider">
         <constructor-arg ref="inMemoryUsersConnectionRepository"/>
@@ -23,12 +25,12 @@
     <!--Step 1
      form login beans -->
     <bean id="appAuthenticationEntryPoint"
-          class="com.bridgelabz.ipl.entrypoint.AppAuthenticationEntryPoint">
+          class="com.bridgelabz.bridgembass.entrypoint.AppAuthenticationEntryPoint">
         <constructor-arg name="loginFormUrl" value="/services/login"/>
     </bean>
     <bean id="rememberMeServices"
           class="org.springframework.security.web.authentication.NullRememberMeServices"/>
-    <bean id="successHandler" class="com.bridgelabz.ipl.handler.AppSuccessHandler"/>
+    <bean id="successHandler" class="com.bridgelabz.bridgembass.handler.AppSuccessHandler"/>
     <bean id="failureHandler"
           class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
         <constructor-arg name="defaultFailureUrl" value="/services/accessdenied"/>
@@ -95,7 +97,7 @@
     <!-- Step 3
     service registry will holds connection factory of each social provider -->
     <bean id="appSocialAuthenticationServiceRegistry"
-          class="com.bridgelabz.ipl.registry.AppSocialAuthenticationServiceRegistry">
+          class="com.bridgelabz.bridgembass.registry.AppSocialAuthenticationServiceRegistry">
         <constructor-arg>
             <list>
                 <ref bean="facebookAuthenticationService"/>
@@ -133,5 +135,5 @@
     <bean id="userIdSource" class="org.springframework.social.security.AuthenticationNameUserIdSource"/>
 
     <!-- If no local user is associated to a social connection then connection sign up will create a new local user and map it to social user -->
-    <bean id="connectionSignUp" class="com.bridgelabz.ipl.registry.AppConnectionSignUp"/>
+    <bean id="connectionSignUp" class="com.bridgelabz.bridgembass.registry.AppConnectionSignUp"/>
 </beans>

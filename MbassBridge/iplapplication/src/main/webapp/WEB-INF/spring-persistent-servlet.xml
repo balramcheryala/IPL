@@ -12,7 +12,7 @@
     <tx:annotation-driven />
 
     <!-- Ensures scans all annotations -->
-    <context:component-scan base-package="com.bridgelabz.ipl"/>
+    <context:component-scan base-package="com.bridgelabz.bridgembass"/>
 
     <!-- Ensures that configuration properties are read from a property file -->
     <context:property-placeholder location="classpath:application.properties"/>
@@ -50,7 +50,7 @@
     <bean id="loginSessionFactory"
           class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="packagesToScan" value="com.bridgelabz.ipl"/>
+        <property name="packagesToScan" value="com.bridgelabz.bridgembass"/>
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.hbm2ddl.auto">

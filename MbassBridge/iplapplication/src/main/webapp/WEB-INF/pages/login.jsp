@@ -5,9 +5,9 @@
 <title>${title}</title>
 <head>
 <style type="text/css">
-		body{
-			background-size:cover;
-		}
+body {
+	background-size: cover;
+}
 </style>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -20,44 +20,42 @@
 	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 	crossorigin="anonymous"></script>
 </head>
-<body BACKGROUND="<c:url value='/resources/images/back.jpg'/> "/>
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-					aria-expanded="false">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-envelope"></span>
-				</button>
-				<a class="navbar-brand" href="#">MBASSBRIDGE</a>
-			</div>
+<body BACKGROUND="<c:url value='/resources/images/back.jpg'/> " />
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-envelope"></span>
+			</button>
+			<a class="navbar-brand" href="">${name}</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse"
+			id="bs-example-navbar-collapse-1">
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse"
-				id="bs-example-navbar-collapse-1">
 
-
-				<form class="navbar-form navbar-left" role="search">
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Find apps">
-					</div>
-					<button type="submit" class="btn btn-info">Go</button>
-				</form>
-					<form class="nav navbar-nav navbar-right"
-						name='GoogleSocialloginForm'
-						action="<c:url value='../auth/google' />" method='POST'>
-						<button type="submit" class="btn btn-info">
-							Sign In with Google
-						</button>
-						<input type="hidden" name="scope"
-							value="https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo#email https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/tasks https://www-opensocial.googleusercontent.com/api/people https://www.googleapis.com/auth/plus.login" />
-						<div class="clear"></div>
-					</form>
-					
-			</div>
-<%-- 			<!-- /.container-fluid -->
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Find apps">
+				</div>
+				<button type="submit" class="btn btn-info">Go</button>
+			</form>
+			<form class="nav navbar-nav navbar-right"
+				name='GoogleSocialloginForm'
+				action="<c:url value='../auth/google' />" method='POST'>
+				<button type="submit" class="btn btn-info">Sign In with
+					Google</button>
+				<input type="hidden" name="scope"
+					value="https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo#email https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/tasks https://www-opensocial.googleusercontent.com/api/people https://www.googleapis.com/auth/plus.login" />
+				<div class="clear"></div>
+			</form>
+		</div>
+	</div>
+	<%-- 			<!-- /.container-fluid -->
 	</nav>
 	<form class="login_form" name='loginForm'
 		action="<c:url value='../j_spring_security_check' />" method='POST'>
@@ -100,7 +98,6 @@
 			<form name='TwitterSocialloginForm'
 				action="<c:url value='../auth/twitter?scope=email,user_about_me,user_birthday' />"
 				method='POST'>
-				<img src="../images/twitter.png" alt="">
 				<button type="submit">
 					<i>Sign In with Twitter</i>
 				</button>
@@ -118,5 +115,5 @@
 			</form>
 		</div>
 	</div> --%>
-</body>
+	</body>
 </html>

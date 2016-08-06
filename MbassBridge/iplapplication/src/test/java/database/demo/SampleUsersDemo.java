@@ -8,16 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.bridgelabz.ipl.database.model.Role;
-import com.bridgelabz.ipl.database.model.User;
-
-
-/**
- * @author <a href="mailto:psunil1278@gmail.com">Sunil Kumar</a>
- * @since 26/12/15
- *
- * Run this stand alone main method to create database and create sample entries in user and role tables.
- */
+import com.bridgelabz.bridgembass.database.model.Role;
+import com.bridgelabz.bridgembass.database.model.User;
 
 public class SampleUsersDemo {
 
@@ -25,7 +17,7 @@ public class SampleUsersDemo {
         URL url = SampleUsersDemo.class.getClassLoader().getResource("test.hibernate.cfg.xml");
         File file = new File(url.getPath());
 
-        Configuration configuration = new Configuration().configure(file);
+        Configuration configuration = new Configuration().configure(file);	
         SessionFactory sessionFactory = configuration.buildSessionFactory();
 
         final Session currentSession = sessionFactory.openSession();
