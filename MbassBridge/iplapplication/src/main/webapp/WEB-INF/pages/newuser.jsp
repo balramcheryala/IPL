@@ -287,8 +287,8 @@
 						</div>
 					</div>
 					<div class="auth-content">
-						<p class="text-xs-center">Create a FileBase New User</p>
-						<form id="signup-form" action="/index.html" method="GET"
+						<p class="text-xs-center">Add an Email/Password user</p>
+						<form id="signup-form" action="/user" method="GET"
 							novalidate="">
 
 							<div class="form-group">
@@ -304,11 +304,7 @@
 											name="password" id="password" placeholder="Enter password"
 											required="">
 									</div>
-									<div class="col-sm-6">
-										<input type="password" class="form-control underlined"
-											name="retype_password" id="retype_password"
-											placeholder="Re-type password" required="">
-									</div>
+								
 								</div>
 							</div>
 							<div class="form-group">
@@ -327,7 +323,7 @@
 					</div>
 				</div>
 				<div class="text-xs-center">
-					<a href="index.html" class="btn btn-secondary rounded btn-sm">
+					<a href="/userpage" class="btn btn-secondary rounded btn-sm">
 						<i class="fa fa-arrow-left"></i> Back to dashboard
 					</a>
 				</div>

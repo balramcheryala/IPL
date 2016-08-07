@@ -37,14 +37,7 @@
 					</form>
 				</div>
 				<div class="header-block header-block-buttons">
-					<a href="https://github.com/modularcode/modular-admin-html"
-						class="btn btn-oval btn-sm rounded-s header-btn"> <i
-						class="fa fa-github-alt"></i> View on GitHub
-					</a> <a
-						href="https://github.com/modularcode/modular-admin-html/releases/download/v1.0.1/modular-admin-html-1.0.1.zip"
-						class="btn btn-oval btn-sm rounded-s header-btn"> <i
-						class="fa fa-cloud-download"></i> Download .zip
-					</a>
+					
 				</div>
 				<div class="header-block header-block-nav">
 					<ul class="nav-profile">
@@ -73,24 +66,10 @@
 													style="background-image: url('assets/faces/5.jpg')"></div>
 											</div>
 											<div class="body-col">
-												<p>
-													<span class="accent">Amaya Hatsumi</span> started new task:
-													<span class="accent">Dashboard UI design.</span>.
-												</p>
+												
 											</div>
 									</a></li>
-									<li><a href="" class="notification-item">
-											<div class="img-col">
-												<div class="img"
-													style="background-image: url('assets/faces/8.jpg')"></div>
-											</div>
-											<div class="body-col">
-												<p>
-													<span class="accent">Andy Nouman</span> deployed new
-													version of <span class="accent">NodeJS REST Api V3</span>
-												</p>
-											</div>
-									</a></li>
+									<li>
 								</ul>
 								<footer>
 									<ul>
@@ -131,7 +110,7 @@
 									class="l l3"></span> <span class="l l4"></span> <span
 									class="l l5"></span>
 							</div>
-							Modular Admin
+							${title}
 						</div>
 					</div>
 					<nav class="menu">
@@ -139,91 +118,7 @@
 							<li><a href="index.html"> <i class="fa fa-home"></i>
 									Dashboard
 							</a></li>
-							<li><a href=""> <i class="fa fa-th-large"></i> Items
-									Manager <i class="fa arrow"></i>
-							</a>
-								<ul>
-									<li><a href="items-list.html"> Items List </a></li>
-									<li><a href="item-editor.html"> Item Editor </a></li>
-								</ul></li>
-							<li><a href=""> <i class="fa fa-bar-chart"></i> Charts <i
-									class="fa arrow"></i>
-							</a>
-								<ul>
-									<li><a href="charts-flot.html"> Flot Charts </a></li>
-									<li><a href="charts-morris.html"> Morris Charts </a></li>
-								</ul></li>
-							<li><a href=""> <i class="fa fa-table"></i> Tables <i
-									class="fa arrow"></i>
-							</a>
-								<ul>
-									<li><a href="static-tables.html"> Static Tables </a></li>
-									<li><a href="responsive-tables.html"> Responsive
-											Tables </a></li>
-								</ul></li>
-							<li><a href="forms.html"> <i
-									class="fa fa-pencil-square-o"></i> Forms
-							</a></li>
-							<li><a href=""> <i class="fa fa-desktop"></i> UI
-									Elements <i class="fa arrow"></i>
-							</a>
-								<ul>
-									<li><a href="buttons.html"> Buttons </a></li>
-									<li><a href="cards.html"> Cards </a></li>
-									<li><a href="typography.html"> Typography </a></li>
-									<li><a href="icons.html"> Icons </a></li>
-									<li><a href="grid.html"> Grid </a></li>
-								</ul></li>
-							<li class="active open"><a href=""> <i
-									class="fa fa-file-text-o"></i> Pages <i class="fa arrow"></i>
-							</a>
-								<ul>
-									<li><a href="login.html"> Login </a></li>
-									<li><a href="signup.html"> Sign Up </a></li>
-									<li><a href="reset.html"> Reset </a></li>
-									<li class="active"><a href="error-404.html"> Error 404
-											App </a></li>
-									<li><a href="error-404-alt.html"> Error 404 Global </a></li>
-									<li><a href="error-500.html"> Error 500 App </a></li>
-									<li><a href="error-500-alt.html"> Error 500 Global </a></li>
-								</ul></li>
-							<li><a
-								href="https://github.com/modularcode/modular-admin-html"> <i
-									class="fa fa-github-alt"></i> Theme Docs
-							</a></li>
-						</ul>
-					</nav>
-				</div>
-				<footer class="sidebar-footer">
-					<ul class="nav metismenu" id="customize-menu">
-						<li>
-							<ul>
-								<li class="customize">
-									<div class="customize-item">
-										<div class="row customize-header">
-											<div class="col-xs-4"></div>
-											<div class="col-xs-4">
-												<label class="title">fixed</label>
-											</div>
-											<div class="col-xs-4">
-												<label class="title">static</label>
-											</div>
-										</div>
-										<div class="row hidden-md-down">
-											<div class="col-xs-4">
-												<label class="title">Sidebar:</label>
-											</div>
-											<div class="col-xs-4">
-												<label> <input class="radio" type="radio"
-													name="sidebarPosition" value="sidebar-fixed"> <span></span>
-												</label>
-											</div>
-											<div class="col-xs-4">
-												<label> <input class="radio" type="radio"
-													name="sidebarPosition" value=""> <span></span>
-												</label>
-											</div>
-										</div>
+				
 										<div class="row">
 											<div class="col-xs-4">
 												<label class="title">Header:</label>

@@ -65,21 +65,7 @@
 											</p>
 										</div>
 								</a></li>
-								<li><a href="" class="notification-item">
-										<div class="img-col">
-											<div class="img"
-												style="background-image: url('assets/faces/8.jpg')"></div>
-										</div>
-										<div class="body-col">
-											<p>
-												<span class="accent">Andy Nouman</span> deployed new version
-												of <span class="accent">NodeJS REST Api V3</span>
-											</p>
-										</div>
-								</a></li>
-							</ul>
-							<footer>
-							<ul>
+								<ul>
 								<li><a href=""> View All </a></li>
 							</ul>
 							</footer>
@@ -132,53 +118,7 @@
 							<li><a href="userpage"> Users </a></li>
 							<li><a href="signinby"> Sign-in Method </a></li>
 						</ul></li>
-					<li><a href=""> <i class="fa fa-bar-chart"></i> Charts <i
-							class="fa arrow"></i>
-					</a>
-						<ul>
-							<li><a href="charts-flot.html"> Flot Charts </a></li>
-							<li><a href="charts-morris.html"> Morris Charts </a></li>
-						</ul></li>
-					<li><a href=""> <i class="fa fa-table"></i> Tables <i
-							class="fa arrow"></i>
-					</a>
-						<ul>
-							<li><a href="static-tables.html"> Static Tables </a></li>
-							<li><a href="responsive-tables.html"> Responsive Tables
-							</a></li>
-						</ul></li>
-					<li><a href="forms.html"> <i class="fa fa-pencil-square-o"></i>
-							Forms
-					</a></li>
-					<li><a href=""> <i class="fa fa-desktop"></i> UI Elements
-							<i class="fa arrow"></i>
-					</a>
-						<ul>
-							<li><a href="buttons.html"> Buttons </a></li>
-							<li><a href="cards.html"> Cards </a></li>
-							<li><a href="typography.html"> Typography </a></li>
-							<li><a href="icons.html"> Icons </a></li>
-							<li><a href="grid.html"> Grid </a></li>
-						</ul></li>
-					<li><a href=""> <i class="fa fa-file-text-o"></i> Pages <i
-							class="fa arrow"></i>
-					</a>
-						<ul>
-							<li><a href="login.html"> Login </a></li>
-							<li><a href="signup.html"> Sign Up </a></li>
-							<li><a href="reset.html"> Reset </a></li>
-							<li><a href="error-404.html"> Error 404 App </a></li>
-							<li><a href="error-404-alt.html"> Error 404 Global </a></li>
-							<li><a href="error-500.html"> Error 500 App </a></li>
-							<li><a href="error-500-alt.html"> Error 500 Global </a></li>
-						</ul></li>
-					<li><a
-						href="https://github.com/modularcode/modular-admin-html"> <i
-							class="fa fa-github-alt"></i> Theme Docs
-					</a></li>
-				</ul>
-				</nav>
-			</div>
+					
 			<footer class="sidebar-footer">
 			<ul class="nav metismenu" id="customize-menu">
 				<li>
