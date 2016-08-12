@@ -3,9 +3,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
 <title>${title}</title>
-
+<script
+	src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400'
+	rel='stylesheet' type='text/css'>
 <link rel="stylesheet"
 	href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
 <link rel="stylesheet"
@@ -27,18 +31,10 @@
 					<i class="fa fa-bars"></i>
 				</button>
 			</div>
-			<div class="header-block header-block-search hidden-sm-down">
-				<form role="search">
-					<div class="input-container">
-						<i class="fa fa-search"></i> <input type="search"
-							placeholder="Search">
-						<div class="underline"></div>
-					</div>
-				</form>
-			</div>
-		
+
+
 			<div class="header-block header-block-nav">
-				<ul class="nav-profile">	
+				<ul class="nav-profile">
 					<li class="notifications new"><a href=""
 						data-toggle="dropdown"> <i class="fa fa-bell-o"></i> <sup>
 								<span class="counter">8</span>
@@ -52,10 +48,7 @@
 												style="background-image: url('assets/faces/3.jpg')"></div>
 										</div>
 										<div class="body-col">
-											<p>
-												<span class="accent">Zack Alien</span> pushed new commit: <span
-													class="accent">Fix page load performance issue</span>.
-											</p>
+										
 										</div>
 								</a></li>
 								<li><a href="" class="notification-item">
@@ -64,10 +57,7 @@
 												style="background-image: url('assets/faces/5.jpg')"></div>
 										</div>
 										<div class="body-col">
-											<p>
-												<span class="accent">Amaya Hatsumi</span> started new task:
-												<span class="accent">Dashboard UI design.</span>.
-											</p>
+											
 										</div>
 								</a></li>
 								<li><a href="" class="notification-item">
@@ -76,10 +66,7 @@
 												style="background-image: url('assets/faces/8.jpg')"></div>
 										</div>
 										<div class="body-col">
-											<p>
-												<span class="accent">Andy Nouman</span> deployed new version
-												of <span class="accent">NodeJS REST Api V3</span>
-											</p>
+										
 										</div>
 								</a></li>
 							</ul>
@@ -127,122 +114,42 @@
 				</div>
 				<nav class="menu">
 				<ul class="nav metismenu" id="sidebar-menu">
-					<li><a href="dashboard"> <i class="fa fa-home"></i>
-							Dashboard
+					<li><a href=""> <i class="fa fa-home"></i> Dashboard
 					</a></li>
 					<li class="active open"><a href=""> <i
 							class="fa fa-th-large"></i> Auth <i class="fa arrow"></i>
 					</a>
 						<ul>
-							<li class="active"><a href="user"> Users </a></li>
-							<li><a href="sign-in"> Sign-in Method </a></li>
+							<li><a href="userpage"> Users </a></li>
+							<li class="active"><a href="signinby"> Sign-in Method </a></li>
 						</ul></li>
-					<li><a href=""> <i class="fa fa-bar-chart"></i> Charts <i
-							class="fa arrow"></i>
-					</a>
-						<ul>
-							<li><a href="charts-flot.html"> Flot Charts </a></li>
-							<li><a href="charts-morris.html"> Morris Charts </a></li>
-						</ul></li>
-		
-			</footer> </aside>
+			</aside>
 			<div class="sidebar-overlay" id="sidebar-overlay"></div>
-			<article class="content items-list-page">
-			<div class="title-search-block">
-				<div class="title-block">
-					<div class="row">
-						<div class="col-md-6">
-							<h3 class="title">
-
-								</form>
-						</div>
-					</div>
-					<div class="auth-content">
-						<p class="text-xs-center">Add an Email/Password user</p>
-						<form id="signup-form" action="authsave" method="POST"
-							novalidate="">
-
-							<div class="form-group">
-								<label for="email">Email</label> <input type="email"
-									class="form-control underlined" name="email" id="email"
-									placeholder="Enter email address" required="">
-							</div>
-							<div class="form-group">
-								<label for="password">Password</label>
-								<div class="row">
-									<div class="col-sm-6">
-										<input type="password" class="form-control underlined"
-											name="UserUID" id="password" placeholder="Enter password"
-											required="">
-									</div>
-								
-								</div>
-							</div>
-							
-							
-							<div class="form-group">
-							
-								<button type="submit" class="btn btn-block btn-primary">Add
-									User</button>
-									</form>
-							</div>
-					</div>
-				</div>
-				<div class="text-xs-center">
-					<a href="userpage" class="btn btn-secondary rounded btn-sm">
-						<i class="fa fa-arrow-left"></i> Back to dashboard
-					</a>
-				</div>
+			<article class="content item-editor-page">
+			<div class="title-block">
+				<h3 class="title">
+					${project} <span class="sparkline bar" data-type="bar"></span>
+				</h3>
 			</div>
+			<div class="auth-content">
+				<p class="text-xs-center">Add Email Id And Password</p>
+				<form id="signup-form" action="authsave" method="POST" novalidate="">
+
+					<div class="form-group">
+						<label for="email">EmailId</label> <input type="email"
+							class="form-control underlined" name="clientid" id="email"
+							placeholder="Enter Email Id " required="">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label> <input type="password"
+							class="form-control underlined" name="secrete" id="password"
+							placeholder="Enter Password" required="">
+					</div>
+			</div>
+
+			<button type="submit" class="btn btn-block btn-primary">Add
+			</button>
 		</div>
-		</li>
-		<li class="item">
-			<div class="item-row">
-				<div class="item-col fixed item-col-check">
-					<label class="item-check" id="select-all-items"> <span></span>
-					</label>
-				</div>
-				<div class="item-col fixed item-col-img md">
-					</a>
-				</div>
-
-				<div class="item-col fixed item-col-actions-dropdown">
-					<div class="item-actions-dropdown">
-						<a class="item-actions-toggle-btn"> <span class="inactive">
-
-						</span>		
-								</div>
-					</div>
-				</div>
-			</div>
-	</article>
-	<!-- /.modal -->
-	<div class="modal fade" id="confirm-modal">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h4 class="modal-title">
-						<i class="fa fa-warning"></i> Alert
-					</h4>
-				</div>
-				<div class="modal-body">
-					<p>Are you sure want to do this?</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-					<button type="button" class="btn btn-secondary"
-						data-dismiss="modal">No</button>
-				</div>
-			</div>
-			<!-- /.modal-content -->
-		</div>
-		<!-- /.modal-dialog -->
-	</div>
-	<!-- /.modal -->
 	<!-- Reference block for JS -->
 	<div class="ref" id="ref">
 		<div class="color-primary"></div>
@@ -253,11 +160,13 @@
 	</div>
 	<script type="text/javascript"
 		src="<c:url value="/resources/js/vendor.js" />"></script>
-	<script type="text/javascript"
-		src="<c:url value="/resources/js/app.js" />"></script>
-	</div>
 
+	</div>
 </body>
 
 </html>
-</ul>
+
+
+
+
+
